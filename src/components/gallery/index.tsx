@@ -37,8 +37,14 @@ const StyledText = styled.span`
 `
 
 const StyledHead = styled.p`
-    width: 100%;
+    color: var(--text-01-body, #454545);
     text-align: center;
+    font-family: Poppins;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 38.4px; /* 120% */
+    margin: 30px 0;
 `
 
 const GalleryComponent = () => {

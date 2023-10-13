@@ -7,6 +7,8 @@ import CategoryComponent from '@src/components/categories';
 import VideoComponent from '@src/components/video';
 import OfferingComponent from '@src/components/offering';
 import TrustComponent from '@src/components/trust';
+import CTAComponent from '@src/components/cta';
+import Featured from '@src/components/featured';
 
 const Container = styled.div`
   display: flex;
@@ -16,6 +18,7 @@ const Container = styled.div`
   margin: auto;
   align-items: center;
   justify-content: center;
+  margin: 100px auto;
 `
 const TextContainer = styled.div`
   display: flex;
@@ -59,8 +62,17 @@ const StyledHead = styled.h3`
   font-family: Poppins;
   font-size: 62px;
   font-style: normal;
-  font-weight: 250;
+  font-weight: 300;
   line-height: 80px; /* 129.032% */
+  margin: 100px auto 60px;
+`
+const StyledSubHeading = styled.h3`
+  color: var(--text-01-body, #454545);
+  text-align: center;
+  font-family: Poppins;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 300;
 `
 const StyledRedText = styled.h3`
   color: #98002E;
@@ -70,6 +82,10 @@ const StyledRedText = styled.h3`
   font-style: normal;
   font-weight: 250;
   line-height: 80px; /* 129.032% */
+`
+
+const Separater = styled.div`
+  margin: 100px auto;
 `
 
 const HomePage = () => {
@@ -90,9 +106,9 @@ const HomePage = () => {
         </div>
       </Container>
       <GalleryComponent />
-      <Container className='my-5'>
+      <Container>
         <div className='col' />
-        <TextContainer className='col-sm-12 col-md-8 my-5'>
+        <TextContainer className='col-sm-12 col-md-8'>
           <StyledTitle>Financing & Mortgage Options. </StyledTitle>
           <StyledText>Every family is unique when it comes to financing. Let us help guide you through the lending process and find the best rate.</StyledText>
         </TextContainer>
@@ -103,10 +119,18 @@ const HomePage = () => {
       <CategoryComponent />
       <StyledHead>Explore The Beautiful Jersey Shore</StyledHead>
       <VideoComponent />
-      <StyledRedText style={{}}>MIKE KOVEN</StyledRedText>
-      <StyledText>New Jersey Licensed Builder.</StyledText>
+      <Separater>
+        <StyledRedText>MIKE KOVEN</StyledRedText>
+        <StyledSubHeading>New Jersey Licensed Builder.</StyledSubHeading>
+      </Separater>
       <OfferingComponent />
-      <TrustComponent />
+      <Separater>
+        <TrustComponent />
+      </Separater>
+      <CTAComponent />
+      <Separater>
+        <Featured />
+      </Separater>
     </div>
   );
 };
